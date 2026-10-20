@@ -8,3 +8,11 @@ const { Pool } = pg
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
+// Konfigurasi koneksi ke Database PostgreSQL
+const pool = new Pool({
+  user: 'postgres',
+  host: 'localhost',
+  database: 'mahasiswa', // Pastikan database 'mahasiswa' sudah dibuat di PostgreSQL
+  password: 'Anjing14560', // Sesuaikan dengan password PostgreSQL masing-masing
+  port: 5432,
+})
